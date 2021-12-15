@@ -43,7 +43,7 @@ FEATURES LEFT TO BE IMPLEMENTED :
                              
 SCREENSHOTS :
              
-             DRIVE LINK : - https://drive.google.com/drive/folders/1I9ZrFaOc76I85Gz3KYNSUSJR4GVXnLSr?usp=sharing screenshots of drive link
+             DRIVE LINK : - [dive],(https://drive.google.com/drive/folders/1I9ZrFaOc76I85Gz3KYNSUSJR4GVXnLSr?usp=sharing) 
 
 
             
