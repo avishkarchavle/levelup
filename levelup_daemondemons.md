@@ -43,7 +43,9 @@ FEATURES LEFT TO BE IMPLEMENTED :
                              
 SCREENSHOTS :
              
-             DRIVE LINK : - [dive],(https://drive.google.com/drive/folders/1I9ZrFaOc76I85Gz3KYNSUSJR4GVXnLSr?usp=sharing) 
+             DRIVE LINK : 
+             
+                        https://drive.google.com/drive/folders/1I9ZrFaOc76I85Gz3KYNSUSJR4GVXnLSr?usp=sharing
 
 
             
