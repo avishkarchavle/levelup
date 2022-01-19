@@ -1,0 +1,216 @@
+<% layout('layouts/boilerplate')%>
+
+    <body style="background-color:white">
+
+        <link rel="stylesheet" href="/css/newteacher.css">
+        <div id="teacher" class="container py-5 h-100">
+
+            <nav class="navbar sticky-top navbar-light bg-light ">
+                <a class="navbar-brand " href="/teachers/<%= teacher._id%>/logout"><button type="button "
+                        class="btn btn-dark ">LOGOUT</button></a>
+
+                <a class="navbar-brand  " href="/teachers/<%= teacher._id%>/main"><button type="button " id="acc "
+                        class="btn btn-outline-success ">
+                        MAIN PAGE </button></a>
+
+            </nav>
+
+
+            <CENter>
+                <h1>ACCOUNT INFORMATION </h1>
+            </CENter>
+
+            <form action="/teachers/<%=teacher._id%>?_method=PATCH" method="post">
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row mb-4">
+                    <div class="col">
+                        <div class="form-outline">
+                            <input type="text" id="form6Example1" class="form-control" name="teacher[firstName]" value="<%=teacher.firstName%>">
+                            <label class="form-label" for="form6Example1"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-pencil-square"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                    <path fill-rule="evenodd"
+                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                </svg> Edit First name</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-outline">
+                            <input type="text" id="form6Example2" class="form-control" name="teacher[lastName]" value="<%=teacher.lastName%>">
+                            <label class="form-label" for="form6Example2"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-pencil-square"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                    <path fill-rule="evenodd"
+                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                </svg> Edit Last name</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  -->
+                <div class="form-outline mb-4">
+                    <input type="text" id="form6Example6" name="teacher[qualification]" value="<%=teacher.qualification%>">
+                    <label class="form-label" for="form6Example6"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path
+                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                            <path fill-rule="evenodd"
+                                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                        </svg> Edit Qualification</label>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <div class="form-outline">
+                            <input type="text" id="form6Example1" class="form-control" name="teacher[experience]" value="<%=teacher.experience%>">
+                            <label class="form-label" for="form6Example1"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-pencil-square"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                    <path fill-rule="evenodd"
+                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                </svg> Edit Experience</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-outline">
+                            <input type="text" id="form6Example2" class="form-control" name="teacher[gender]" value="<%=teacher.gender%>">
+                            <label class="form-label" for="form6Example2"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-pencil-square"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                    <path fill-rule="evenodd"
+                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                </svg> Edit Gender</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input -->
+                <div class="form-outline mb-4">
+                    <input type="text" id="form6Example3" class="form-control" name="teacher[subject]" value="<%=teacher.subject%>">
+                    <label class="form-label" for="form6Example3"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path
+                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                            <path fill-rule="evenodd"
+                                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                        </svg>Edit Subject</label>
+                </div>
+
+
+                <!-- Text input -->
+                <div class="form-outline mb-4">
+                    <!-- <input type="text" name="teacher[district]" id="form6Example12" class="form-control" required> -->
+                    <select name="teacher[district]" id="form6Example12" class="form-control" type="text" required>
+                        <option value="<%=teacher.district%>">
+                            <%=teacher.district%>
+                        </option>
+                        <option value="akola">Akola</option>
+                        <option value="amravati">Amravati</option>
+                        <option value="aurangabad">Aurangabad</option>
+                        <option value="ahmednagar">Ahmednagar</option>
+                        <option value="beed">Beed</option>
+                        <option value="bhandara">Bhandara</option>
+                        <option value="buldhana">Buldhana</option>
+                        <option value="chandrapur">Chandrapur</option>
+                        <option value="dhule">Dhule</option>
+                        <option value="gadchiroli">Gadchiroli</option>
+                        <option value="gondia">Gondia</option>
+                        <option value="hingoli">Hingoli</option>
+                        <option value="jalna">Jalna</option>
+                        <option value="jalgaon">Jalgaon</option>
+                        <option value="kolhapur">Kolhapur</option>
+                        <option value="latur">Latur</option>
+                        <option value="mumbai city">Mumbai City</option>
+                        <option value="mumbai suburban">Mumbai Suburban</option>
+                        <option value="nanded">Nanded</option>
+                        <option value="nashik">Nashik</option>
+                        <option value="nagpur">Nagpur</option>
+                        <option value="nandurbar">Nandurbar</option>
+                        <option value="osmanabad">Osmanabad</option>
+                        <option value="parbhani">Parbhani</option>
+                        <option value="pune">Pune</option>
+                        <option value="palghar">Palghar</option>
+                        <option value="raigad">Raigad</option>
+                        <option value="ratnagiri">Ratnagiri</option>
+                        <option value="sangli">Sangli</option>
+                        <option value="satara">Satara</option>
+                        <option value="sindhudurg">Sindhudurg</option>
+                        <option value="solapur">Solapur</option>
+                        <option value="thane">Thane</option>
+                        <option value="washim">Washim</option>
+                        <option value="wardha">Wardha</option>
+                        <option value="yavatmal">Yavatmal</option>
+                    </select>
+                    <label class="form-label" for="form6Example3"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path
+                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                            <path fill-rule="evenodd"
+                                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                        </svg>Edit District</label>
+                </div>
+
+
+
+
+
+
+                <!-- Text input -->
+                <div class="form-outline mb-4">
+                    <input type="text" id="form6Example4" class="form-control" name="teacher[address]" value="<%=teacher.address%>">
+                    <label class="form-label" for="form6Example4"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path
+                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                            <path fill-rule="evenodd"
+                                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                        </svg> Edit Address</label>
+
+                </div>
+
+                <div class="row mb-4">
+                    <!-- Email input -->
+                    <div class="col">
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form6Example5" class="form-control" name="teacher[email]" value="<%=teacher.email%>">
+                            <label class="form-label" for="form6Example5"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-pencil-square"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                    <path fill-rule="evenodd"
+                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                </svg> Edit Email</label>
+                        </div>
+                    </div>
+                    <!-- password input -->
+                    <div class="col">
+                        <div class="form-outline mb-4">
+                            <input type="number" id="form6Example5" class="form-control" name="teacher[phone]" value="<%=teacher.phone%>">
+                            <label class="form-label" for="form6Example5">Edit Number</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">SAVE CHANGES </button>
+            </form>
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous ">
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous ">
+            </script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous ">
+            </script>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>

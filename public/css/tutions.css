@@ -1,0 +1,13 @@
+* {
+    background-color: #041116;
+}
+
+#acc {
+    border: 1px solid black;
+    background-color: white;
+}
+
+#acc:hover {
+    background-color: black;
+    color: white;
+}
