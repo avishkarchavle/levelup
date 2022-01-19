@@ -57,13 +57,7 @@ npm i
 4. Make a .env file and put following parameters
 
 ```
-LEVELUP_PASSWORD={YOUR EMAIL AND PASSWORD}
 SECRET={YOUR OWN SECRET}
-```
-
-5. For environment variables create accounts on following sites:
-```
-GOOGLE LINK=https://console.cloud.google.com/home
 ```
 
 ## 🏃‍♀️ Usage
@@ -74,13 +68,13 @@ After setting up for Web App, follow the below instructions to get it running.
 
 1. Enter mongod and mongo command to connect to the database.
 
-2. Go to gitbash/command prompt, make sure you are in TPO-Website directory, run following command in gitbash
+2. Go to gitbash/command prompt, make sure you are in LEVELUP directory, run following command in gitbash
 
 ```
 nodemon app.js
 ```
 
-3. Open [localhost:3000/](localhost:3000/) in your browser to use LEVELUP!.
+3. Open  [localhost:3000/] (localhost:3000/) in your browser to use LEVELUP!.
 
 ## 🔮 Future Scope
 
