@@ -44,7 +44,7 @@
 1. Clone the repository
 
 ```
-git clone https://github.com/bbhavik16/TPO-Website.git
+git clone https://github.com/avishkarchavle/levelup
 ```
 
 2. Install Node.js (JavaScript runtime environment) and MongoDB(document-oriented database program)
