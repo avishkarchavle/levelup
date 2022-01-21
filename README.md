@@ -24,7 +24,7 @@
 ## 🔗 Links
 
 - GitHub repo link: [Link to repository](https://github.com/avishkarchavle/levelup)
-- Drive link : [Drive link here](https://drive.google.com/drive/u/1/folders/1wn_DjAUL4LQaKjYjPfloq5pJjEBjiAOJ)
+- Drive link : [Drive link here](https://drive.google.com/drive/u/0/folders/1wDcqVdWMw1rKpB2OPjGDsReBXP0YjFWx)
 - Website link: [Deployed link here](http://leveluppro.herokuapp.com/)
 
 ## 🤖 Technology Stack
